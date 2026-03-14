@@ -50,12 +50,12 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className=''>
-                    <div className='flex gap-5 md:flex-row flex-col '>
+                    <div className='flex gap-5 md:flex-row flex-col o'>
                         {
 
                             services.map((service) => (
                                 <div key={service.id} className='relative flex flex-col justify-start items-start lg:gap-10 gap-4 [background:linear-gradient(40deg,#07C42C33_1%,#0B0B0B_30%)] backdrop-blur-xl lg:p-10 p-5 rounded-xl'>
-                                    <img className='absolute w-full top-0 ' src={bgbanner} alt="" />
+                                    <img className='absolute w-full top-0 left-0' src={bgbanner} alt="" />
                                     <img className=' max-h-12.5' src={service.icon} alt="" />
                                     <h3 className='lg:text-xl text-lg'>{service.title}</h3>
                                     <p className='text-xs lg:pt-25 md:pt-13 border-b border-gray-800/50 md:pb-5 pb-10 font-light'>{service.description}</p>
