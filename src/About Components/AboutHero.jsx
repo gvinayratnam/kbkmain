@@ -6,7 +6,7 @@ import rocket from '../assets/imagesabout/span.each-object.png'
 
 const AboutHero = () => {
     return (
-        <div className='md:h-screen h-full w-full relative container-p pt-15 md:bg-contain bg-cover bg-right bg-black bg-no-repeat overflow-hidden' style={{ backgroundImage: `url(${isobg})` }}>
+        <div className='md:h-screen h-full w-full relative container-p sm:pt-15 md:bg-contain bg-cover bg-right bg-black bg-no-repeat overflow-hidden' style={{ backgroundImage: `url(${isobg})` }}>
             <div className='lg:py-20 md:py-15 py-20  h-full text-white max-w-xl flex flex-col justify-center '>
                 <div className='flex flex-col gap-10 sm:pl-12'>
                     <div className='md:text-8xl sm:text-6xl text-2xl font-bold'><span>ABOUT</span> <span className='md:text-6xl sm:text-4xl text-lg'>US</span></div>
@@ -23,7 +23,7 @@ const AboutHero = () => {
                 </div>
             </div>
 
-            <img className='absolute z-10 left-0 -bottom-2 rocket-float w-52' src={wheel} alt="" />
+            <img className='absolute z-10 left-0 md:bottom-2 -bottom-3  rocket-float md:w-52 w-22' src={wheel} alt="" />
             <img className='absolute md:top-[10%] md:left-[45%] top-[20%] left-[80%] w-[15%] rocket-float rotate-10'  src={rocket} alt="" />
         </div>
     )

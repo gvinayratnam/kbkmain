@@ -48,12 +48,12 @@ const Process = () => {
 
                     <div  className='lg:absolute left-[60%] top-30 border border-gray-700 bg-black sm:p-5 p-2  sm:py-9 py-5  flex flex-col sm:gap-5 gap-2   lg:w-2/5 hover:[background:linear-gradient(135deg,_#000,_#002B08,_#000,_#002B08,_#000)] hover:border-green-600/80 hover:z-1'>
                         <div className='flex sm:flex-col justify-start items-center sm:items-start gap-2'>
-                            <img className='w-[75px]' src={process3} alt="" />
+                            <img className='w-18.75' src={process3} alt="" />
                         <h2 className='text-xl'>Goals</h2>
                         </div>
                         <div className=' flex flex-col gap-2 items-start'>
                             <p>Driving Measurable Business Success</p>
-                            <div className='border-b-[1px] w-full border-gray-700'></div>
+                            <div className='border-b w-full border-gray-700'></div>
                             <div className='flex justify-center items-center '>
                                 <h1 className='text-7xl '>S3</h1>
                                 <p className='text-xs font-thin text-gray-400 leading-tight'>I build and launch your site in Framer or Webflow,

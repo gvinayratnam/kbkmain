@@ -180,7 +180,7 @@ const Services2 = () => {
                 transform: `translateX(calc(-${current * 100}% + ${drag}%))`,
                 transition: isTransition ? 'transform 0.9s ease' : '',
               }}
-              className='flex md:min-w-[88%] min-w-full justify-start md:flex-row flex-col pr-2 md:mr-0 mr-1 md:items-stretch items-center gap-5 relative'
+              className='flex md:min-w-[88%] min-w-full justify-start md:flex-row flex-col  md:items-stretch items-center gap-5 relative'
               aria-roledescription="slide"
               aria-label={`${item.title} slide`}
             >
@@ -190,7 +190,7 @@ const Services2 = () => {
                   className='w-full md:h-full overflow-hidden lg:object-cover object-contain'
                   style={{
                     transform: idx === current + 1
-                      ? 'translateX(-30%) scale(0.4)'
+                      ? 'translateX(-25%) scale(0.4)'
                       : 'scale(1)',
                     transition: isTransition ? 'transform 0.9s ease' : '',
                   }}

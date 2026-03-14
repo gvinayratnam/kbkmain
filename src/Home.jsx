@@ -58,6 +58,7 @@ const Home = () => {
      <Services2/>
      <Iso/>
      <Info/>
+     <Techstack/>
      <About/>
    </div>
    </>
