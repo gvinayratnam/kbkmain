@@ -127,7 +127,6 @@ const Services2 = () => {
   const onTouchEnd = () => {
     if (window.innerWidth >= 768) return
     if (!touchStart || !touchEnd) {
-      setIsTransition(true)
       setDrag(0)
       setTouchStart(null)
       setTouchEnd(null)

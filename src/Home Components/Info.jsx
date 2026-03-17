@@ -104,7 +104,6 @@ const Info = () => {
 
     useEffect(()=>{
         if(!start) return;
-
         const interval = setInterval(()=>{
             setCount(prev=>prev.map((num,i)=>{
                             if (num<names[i].value){

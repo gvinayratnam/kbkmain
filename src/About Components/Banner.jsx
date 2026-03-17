@@ -5,6 +5,8 @@ import thir from '../assets/imagesabout/div.service-icon.png'
 import bgbanner from '../assets/imagesabout/bgbanner.png'
 import tunder from '../assets/imagesabout/tunder.png'
 import imgs from '../assets/imagesabout/img.png'
+import { HiArrowTurnDownRight } from 'react-icons/hi2'
+import { PiArrowBendDownRight } from 'react-icons/pi'
 
 
 const Banner = () => {
@@ -59,7 +61,7 @@ const Banner = () => {
                                     <img className=' max-h-12.5' src={service.icon} alt="" />
                                     <h3 className='lg:text-xl text-lg'>{service.title}</h3>
                                     <p className='text-xs lg:pt-25 md:pt-13 border-b border-gray-800/50 md:pb-5 pb-10 font-light'>{service.description}</p>
-                                    <button className='text-xs'>{service.button}</button>
+                                    <button className='text-xs flex gap-1 items-center'><span><PiArrowBendDownRight /></span> {service.button}</button>
                                 </div>
                             ))
 

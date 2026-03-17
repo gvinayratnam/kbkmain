@@ -4,7 +4,7 @@ import { IoDiamondOutline } from 'react-icons/io5'
 import client from '../assets/imagesabout/client.png'
 const Progress = () => {
     return (
-        <div className='flex w-full  lg:flex-nowrap flex-wrap sm:justify-center sm:items-center container-p gap-5 bg-black text-white'>
+        <div className='flex w-full border-b border-[#BFF7471A]/40 py-10  lg:flex-nowrap flex-wrap sm:justify-center sm:items-center container-p gap-5 bg-black text-white'>
             <div className='sm:w-2/5 overflow-hidden rounded-3xl'>
                 <img className='w-full  object-contain h-full' src={progress1} alt="" />
             </div>
@@ -28,7 +28,7 @@ const Progress = () => {
                             </p>
                         </div>
                     </div>
-                    <div></div>
+                    <div className='border border-[#BFF7471A]/40'></div>
                     <div className='flex gap-2 font-thin'>
                         <div className=' flex rounded-xl items-center border border-[#BFF7471A]/40 justify-center bg-[#0B0B0B] p-4'>
                             <IoDiamondOutline className='text-3xl ' />
@@ -51,7 +51,7 @@ const Progress = () => {
                         </div>
                         <div className='flex w-full  items-center'>
                             <div className='border-b w-full border-gray-700/30'></div>
-                            <div className=' w-full bg-red-900 h-2 rounded-xl'></div>
+                            <div className=' w-full bg-red-900 h-1.5 rounded-xl'></div>
                             <div className='border-b w-full border-gray-700/30'></div>
                         </div>
                         <div className='flex items-center justify-center flex-col'>
@@ -60,7 +60,7 @@ const Progress = () => {
                                 Completed</p></div>
                         </div>
                     </div>
-                    <div className='flex items-center justify-center  flex-wrap sm:p-5 py-4 gap-2
+                    <div className='flex items-center justify-center  flex-wrap sm:p-4 py-4 gap-2
                      rounded-full bg-[#0B0B0B] border border-[#BFF7471A]/40 '>
                         <img className='w-20' src={client} alt="" />
                         <span className='font-thin text-sm leading-loose'>Based on 204
