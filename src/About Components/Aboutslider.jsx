@@ -8,6 +8,7 @@ import img6 from '../assets/sliderimg/img6.jpg'
 import img7 from '../assets/sliderimg/img7.jpg'
 import img8 from '../assets/sliderimg/img8.jpg'
 import be from '../assets/sliderimg/be.jpg'
+import bg from '../assets/sliderimg/bg.png'
 import { FiPhoneCall } from 'react-icons/fi'
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8]
@@ -17,8 +18,6 @@ const Aboutslider = () => {
     const [isAnimating, setAnimating] = useState(true)
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768)
     const autoSlideRef = useRef(null)
-
-
     useEffect(() => {
         const handleResize = () => {
             setIsDesktop(window.innerWidth > 768)
@@ -27,15 +26,15 @@ const Aboutslider = () => {
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [])
-
-
+    useEffect(() => {
+        setCurrent(1)
+    }, [isDesktop])
     const size = isDesktop ? 4 : 1
     let arrImages = []
 
     for (let i = 0; i < images.length; i += size) {
         arrImages.push(images.slice(i, i + size))
     }
-
     const last_slide = arrImages.length - 1
 
     const extendedSlides = [
@@ -43,7 +42,6 @@ const Aboutslider = () => {
         ...arrImages,
         arrImages[0]
     ]
-
 
     useEffect(() => {
         if (current === last_slide + 2) {
@@ -61,7 +59,6 @@ const Aboutslider = () => {
         }
     }, [isAnimating])
 
-
     useEffect(() => {
         autoSlideRef.current = setInterval(() => {
             setCurrent(prev => prev + 1)
@@ -69,6 +66,17 @@ const Aboutslider = () => {
 
         return () => clearInterval(autoSlideRef.current)
     }, [])
+
+    const goToSlide = (index) => {
+        clearInterval(autoSlideRef.current)
+
+        setAnimating(true)
+        setCurrent(index + 1)
+
+        autoSlideRef.current = setInterval(() => {
+            setCurrent(prev => prev + 1)
+        }, 4000)
+    }
 
     const activeIndex =
         current === 0
@@ -78,10 +86,11 @@ const Aboutslider = () => {
                 : current - 1
 
     return (
-        <div className='container-p bg-black text-white py-10'>
+        <div className= 'relative container-p bg-black text-white sm:py-10' >
+            <img className='absolute -bottom-[0%]  left-[20%] w-[50%]  object-contain' src={bg} alt="" />
             <div className='flex flex-col items-center sm:mb-10 mb-5'>
                 <p className='text-[#07C42C] text-xs font-thin mb-2'>RECENT WORKS</p>
-                <p className='relative sm:leading-loose leading-tight tracking-wider text-xl'>
+                <p className='relative sm:leading-loose leading-tight tracking-widest sm:text-2xl text-xl'>
                     Projects That Turn Ideas Into Powerful Results
                     <span className='absolute inset-0 [background:linear-gradient(135deg,transparent_30%,#000_55%)]'></span>
                 </p>
@@ -106,18 +115,19 @@ const Aboutslider = () => {
                                     key={i}
                                     src={image}
                                     alt=""
-                                    className={`${isDesktop ? "w-[24%]" : "w-full"} rounded-3xl object-cover `}
+                                    className={`${isDesktop ? "w-[24%]" : "w-full"} rounded-3xl object-cover`}
                                 />
                             ))}
                         </div>
                     ))}
                 </div>
             </div>
-            <div className='flex justify-center items-center gap-3 mt-6'>
+            <div className='flex relative z-10 justify-center items-center gap-3 mt-6'>
                 {arrImages.map((_, idx) => (
                     <div
                         key={idx}
-                        className='h-2 rounded-full transition-all duration-300'
+                        onClick={() => goToSlide(idx)}
+                        className='h-2 rounded-full transition-all duration-300 cursor-pointer'
                         style={{
                             width: idx === activeIndex ? "25px" : "8px",
                             backgroundColor: idx === activeIndex ? "#07C42C" : "gray"
@@ -125,16 +135,20 @@ const Aboutslider = () => {
                     />
                 ))}
             </div>
-            <div className='flex items-center gap-5 justify-center pt-5 md:pt-10'>
+            <div className='flex relative z-10 items-center gap-5 justify-center md:py-20 py-10  w-full  bg-center bg-no-repeat bg-contain '>
+                 {/* style={{ backgroundImage: `url(${bg})` }} */}
+                {/* <img src={bg} alt="" /> */}
                 <div className='relative'>
                     <img src={be} className='w-6 rounded-full' alt="" />
                     <div className='absolute -top-2 h-4 -right-2 p-1 bg-[#07C42C] rounded-full flex items-center justify-center'>
                         <FiPhoneCall className='w-2 fill-black stroke-0' />
                     </div>
                 </div>
+
                 <p className='text-xs w-46'>
                     Let's make something great work together.
                 </p>
+
                 <p className='text-[#07C42C] font-thin text-sm'>
                     Get Free Quote
                 </p>

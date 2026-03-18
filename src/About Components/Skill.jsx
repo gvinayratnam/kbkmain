@@ -65,7 +65,7 @@ const skills = [
 const Skill = () => {
     return (
         <div
-            className="relative text-white bg-black container-p flex md:flex-row flex-col lg:gap-10 md:gap-5 gap-3 py-20 bg-conatin bg-left bg-no-repeat"
+            className="relative text-white bg-black container-p flex md:flex-row flex-col lg:gap-10 md:gap-5 gap-3 py-5 bg-fit bg-bottom-left bg-no-repeat"
             style={{ backgroundImage: `url(${bg})` }}
         >
             {/* <img className='absolute -top-30 left-0 object-fit' src={bg} alt="" /> */}

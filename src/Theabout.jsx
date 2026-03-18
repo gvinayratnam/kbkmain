@@ -6,6 +6,7 @@ import Progress from './About Components/Progress'
 import Awards from './About Components/Awards'
 import Aboutslider from './About Components/Aboutslider'
 import Skill from './About Components/Skill'
+import Achivements from './About Components/Achivements'
 
 const Theabout = () => {
   return (
@@ -16,6 +17,7 @@ const Theabout = () => {
       <Awards/>
       <Aboutslider/>
       <Skill/>
+      <Achivements/>
     </div>
   )
 }
