@@ -83,7 +83,7 @@ const Services = () => {
                                     }} 
                                     className={`flex min-w-full justify-center lg:flex-nowrap  flex-wrap pr-1 mr-1 items-stretch gap-5 `}
                                 >
-                                    <div className='max-w-[250px] w-full flex justify-center items-center'>
+                                    <div className='max-w-62.5 w-full flex justify-center items-center'>
                                         <img className=' w-full overflow-hidden object-cover' src={item.mainImg} alt="" />
                                     </div>
                                     <div className=' flex flex-col justify-between items-start gap-4 '>
@@ -100,13 +100,13 @@ const Services = () => {
 
                                     {/* button */}
                                     <div className=' flex justify-center items-center '>
-                                        <div onClick={nextSlide} className='cursor-pointer block md:p-8 p-4 rounded-full bg-black shadow-[inset_0px_0px_16px_0px_gray,_0px_0px_2px_1px_black] '>
+                                        <div onClick={nextSlide} className='cursor-pointer block md:p-8 p-4 rounded-full bg-black shadow-[inset_0px_0px_16px_0px_gray,0px_0px_2px_1px_black] '>
                                             <FiArrowRight className='md:text-4xl text-2xl ' />
                                         </div>
                                     </div>
 
                                     <div className='flex flex-col items-center  justify-center'>
-                                        <div className="w-[160px] h-[160px]  overflow-hidden">
+                                        <div className="w-40 h-40  overflow-hidden">
                                             <img
                                                 src={item.sideImg}
                                                 className="w-full h-full object-cover"

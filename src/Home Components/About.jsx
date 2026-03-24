@@ -48,8 +48,8 @@ const About = () => {
                                         className={`peer focus:outline-none px-1 w-full py-3 rounded-md border-b-2 border-gray-700/50  placeholder:text-[#FFFFFFA3]`}
                                     />
 
-                                    <span className="absolute left-[47px] top-1/2 -translate-y-1/2 text-[#07C42C] 
-                                    peer-focus:hidden peer-[&:not(:placeholder-shown)]:hidden">
+                                    <span className="absolute left-11.75 top-1/2 -translate-y-1/2 text-[#07C42C] 
+                                    peer-focus:hidden peer-not-placeholder-shown:hidden">
                                         *
                                     </span>
                                 </div>
@@ -64,8 +64,8 @@ const About = () => {
                                         className="peer w-full focus:outline-none px-1 py-3 rounded-md border-b-2 border-gray-700/50 placeholder:text-[#FFFFFFA3]"
                                     />
 
-                                    <span className="absolute left-[44px] top-1/2 -translate-y-1/2 text-[#07C42C]  
-                                    peer-focus:hidden peer-[&:not(:placeholder-shown)]:hidden ">
+                                    <span className="absolute left-11 top-1/2 -translate-y-1/2 text-[#07C42C]  
+                                    peer-focus:hidden peer-not-placeholder-shown:hidden ">
                                         *
                                     </span>
                                 </div>
@@ -111,7 +111,7 @@ const About = () => {
                                     <li>Contact</li>
                                 </ul>
                             </div>
-                            <div className='flex  sm:gap-10 gap-3  justify-center sm:gap-10 sm:flex-nowrap flex-wrap flex-row'>
+                            <div className='flex  gap-3  justify-center sm:gap-10 sm:flex-nowrap flex-wrap flex-row'>
                                 <p className='text-xs w-full'>
                                     SOCIALS
                                 </p>

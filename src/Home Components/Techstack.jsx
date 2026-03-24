@@ -74,7 +74,7 @@ const Techstack = () => {
                         mlogo[logos].map((item, idx) => {
                             const active = gradindex.includes(idx);
                             return (
-                                <div key={idx} className={`w-1/5  lg:h-40 md:h-30 sm:h-20 h-15 p-3 border border-gray-600/50  flex justify-center items-center ${active?"[background:linear-gradient(135deg,_#000,_#1fc43d,_#000,_#1fc43d,_#000)]":""}`}>
+                                <div key={idx} className={`w-1/5  lg:h-40 md:h-30 sm:h-20 h-15 p-3 border border-gray-600/50  flex justify-center items-center ${active?"[background:linear-gradient(135deg,#000,#1fc43d,#000,#1fc43d,#000)]":""}`}>
                                     <img className={`sm:h-5 h-4 transition-transform duration-300 hover:scale-125 `} src={item} key={idx}></img>
                                    
                                 </div>

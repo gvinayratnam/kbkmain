@@ -21,7 +21,7 @@ const Mainabout = () => {
                                     <li>Contact</li>
                                 </ul>
                             </div>
-                            <div className='flex  sm:gap-10 gap-3  justify-center sm:gap-10 sm:flex-nowrap flex-wrap flex-row'>
+                            <div className='flex gap-3  justify-center sm:gap-10 sm:flex-nowrap flex-wrap flex-row'>
                                 <p className='text-xs w-full'>
                                     SOCIALS
                                 </p>
