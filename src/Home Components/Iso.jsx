@@ -31,35 +31,36 @@ const Iso = () => {
     return (
         <div className='lg:bg-cover  bg-no-repeat bg-center text-white container-p bg-[#0A0A0A] lg:py-40 relative pt-20' style={{ backgroundImage: `url(${isobg})` }}>
             <div className='absolute inset-0 bg-black/30 '></div>
-            <div className='flex lg:flex-row  flex-col justify-center gap-2 lg:pb-0 pb-10 items-center'>
-                 
-                <div className=' flex  items-center   md:w-[40%]  w-[50%]'>
-                    
-                   <div className=' relative'>
-                    <div className='absolute rounded-xl inset-0 bg-radial-[at_50%_10%] from-transparent to-black to-95%'>
-                        
-                    </div> 
-                     <img className='' src={bharathsir} alt="" />
-                    <h1 className='ephesis-regular lg:text-3xl  sm:text-2xl text-xl  absolute bottom-1  left-[28%] -rotate-5'>Bharath Kumar</h1>
-                    
-                   </div>
-                </div>
-                <div className='flex flex-col gap-2'>
-                    <h1 className='font-thin tracking-tight text-center w-full '>Find me on</h1>
-                    <div className='w-full  flex flex-row items-center sm:gap-10 gap-5 mb-3 justify-center'>
-                        <FaInstagram  className='text-white bg-[#141414]'/>
-                         <FaLinkedinIn  className='text-white bg-[#141414]'/>
-                        <CiTwitter className='text-white bg-[#141414]' />
-                        <FaFacebookF  className='text-white bg-[#141414]'/>
-                       
+            <div className='flex lg:flex-row flex-col justify-center gap-2 lg:pb-0 pb-10 items-center'>
+
+                <div className=' flex items-center flex-col  md:w-[40%]  w-[50%]'>
+
+                    <div className=' relative'>
+                        <div className='absolute rounded-xl inset-0 bg-radial-[at_50%_10%] from-transparent to-black to-95%'>
+
+                        </div>
+                        <img className='' src={bharathsir} alt="" />
+                        <h1 className='ephesis-regular lg:text-3xl  sm:text-2xl text-xl  absolute bottom-1  left-[28%] -rotate-5'>Bharath Kumar</h1>
+
+                    </div>
+                    <div className='flex flex-col gap-2 pt-5'>
+                        <h1 className='font-thin tracking-tight text-center w-full '>Find me on</h1>
+                        <div className='w-full  flex flex-row items-center sm:gap-10 gap-5 mb-3 justify-center'>
+                            <FaInstagram className='text-white bg-[#141414]' />
+                            <FaLinkedinIn className='text-white bg-[#141414]' />
+                            <CiTwitter className='text-white bg-[#141414]' />
+                            <FaFacebookF className='text-white bg-[#141414]' />
+
+                        </div>
                     </div>
                 </div>
+
                 <div className='w-[14%] px-5 '>
                     <img className='w-full' src={isologo} alt="" />
                 </div>
                 <div className='flex flex-col  justify-between gap-10  lg:w-2/4'>
-                    
-                    <div> 
+
+                    <div>
                         <p className='text-sm md:text-xl  font-thin'>KBK Business Solutions helps businesses grow with smart IT solutions and digital marketing. We create websites, mobile apps, user-friendly designs, and online marketing strategies to improve visibility and business performance.</p>
                     </div>
                     <div className='flex flex-col gap-4'>

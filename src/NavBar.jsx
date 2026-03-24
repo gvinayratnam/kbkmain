@@ -13,7 +13,7 @@ const NavBar = () => {
 
     return (
         <>
-           
+
             <div className='w-screen sm:block hidden h-auto container-p bg-linear-to-r from-[#242424]/90 to-[#111111]/90 fixed z-22'>
                 <div className='flex sm:justify-center justify-between sm:gap-10 sm:text-base text-xs sm:p-4 py-4 text-white'>
                     <div className='cursor-pointer'><NavLink to={'/'}>Home</NavLink></div>
@@ -24,7 +24,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            
+
             <div className='sm:hidden block text-white'>
 
                 <div className='text-3xl p-2 bg-linear-to-r from-[#242424]/90 to-[#111111]/90 relative'>
@@ -45,11 +45,11 @@ const NavBar = () => {
                         </div>
 
                         <div className='text-xl font-thin flex flex-col gap-2'>
-                            <div><span>Home</span></div>
-                            <div><span>About</span></div>
-                            <div><span>Services</span></div>
-                            <div><span>Portfolio</span></div>
-                            <div><span>Contact</span></div>
+                            <div className='cursor-pointer'><NavLink to={'/'}>Home</NavLink></div>
+                            <div className='cursor-pointer'><NavLink to={'/about'}>About</NavLink></div>
+                            <div className='cursor-pointer'><span>Services</span></div>
+                            <div className='cursor-pointer'><span>Portfolio</span></div>
+                            <div className='cursor-pointer'><span>Contact</span></div>
                         </div>
 
                     </div>

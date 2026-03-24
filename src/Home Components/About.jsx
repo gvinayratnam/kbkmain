@@ -95,7 +95,7 @@ const About = () => {
                 <div className='container-p text-white relative z-10'>
                     <div className=' w-full flex flex-col sm:flex-row sm:justify-between'>
                         <div >
-                            <div className='flex gap-2 sm:justify-start justify-center items-center '>
+                            <div className='flex gap-2 sm:justify-start mb-3 items-center'>
                                 <div className='h-2 w-2 bg-[#07C42C] shadow-[0px_0px_3px_2px_#07C42C]  rounded-full'></div>
                                 <p >WORKING GLOBALLY</p>
                             </div>

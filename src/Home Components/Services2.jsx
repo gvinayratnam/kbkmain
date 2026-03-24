@@ -184,7 +184,7 @@ const Services2 = () => {
               aria-label={`${item.title} slide`}
             >
               {/* Image */}
-              <div className='lg:max-w-[250px] max-w-[230px] w-full flex items-center justify-center'>
+              <div className='lg:max-w-62.5 max-w-57.5 w-full flex items-center justify-center'>
                 <img
                   className='w-full md:h-full overflow-hidden lg:object-cover object-contain'
                   style={{
@@ -228,7 +228,7 @@ const Services2 = () => {
                 <button
                   onClick={nextSlide}
                   aria-label="Next slide"
-                  className='cursor-pointer lg:p-6 p-2 rounded-full bg-black shadow-[inset_0px_0px_16px_0px_gray,_0px_0px_2px_1px_black]'
+                  className='cursor-pointer lg:p-6 p-2 rounded-full bg-black shadow-[inset_0px_0px_16px_0px_gray,0px_0px_2px_1px_black]'
                 >
                   <FiArrowRight aria-hidden="true" className='md:text-3xl sm:text-2xl text-xl' />
                 </button>

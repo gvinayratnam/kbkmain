@@ -87,7 +87,8 @@ const Aboutslider = () => {
 
     return (
         <div className= 'relative container-p bg-black text-white sm:py-10' >
-            <img className='absolute -bottom-[0%]  left-[20%] w-[50%]  object-contain' src={bg} alt="" />
+            <img className='absolute -bottom-[0%]  left-[20%] w-[50%]  object-contain ' src={bg} alt="" />
+            <div className='absolute -bottom-[0%] bg-black/50 left-[20%] w-[50%] h-[40%] '></div>
             <div className='flex flex-col items-center sm:mb-10 mb-5'>
                 <p className='text-[#07C42C] text-xs font-thin mb-2'>RECENT WORKS</p>
                 <p className='relative sm:leading-loose leading-tight tracking-widest sm:text-2xl text-xl'>
@@ -140,6 +141,7 @@ const Aboutslider = () => {
                 {/* <img src={bg} alt="" /> */}
                 <div className='relative'>
                     <img src={be} className='w-6 rounded-full' alt="" />
+                    
                     <div className='absolute -top-2 h-4 -right-2 p-1 bg-[#07C42C] rounded-full flex items-center justify-center'>
                         <FiPhoneCall className='w-2 fill-black stroke-0' />
                     </div>
@@ -149,7 +151,7 @@ const Aboutslider = () => {
                     Let's make something great work together.
                 </p>
 
-                <p className='text-[#07C42C] font-thin text-sm'>
+                <p className='text-[#07C42C] font-thin text-sm cursor-pointer'>
                     Get Free Quote
                 </p>
             </div>

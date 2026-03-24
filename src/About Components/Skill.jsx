@@ -65,10 +65,10 @@ const skills = [
 const Skill = () => {
     return (
         <div
-            className="relative text-white bg-black container-p flex md:flex-row flex-col lg:gap-10 md:gap-5 gap-3 py-5 bg-fit bg-bottom-left bg-no-repeat"
-            style={{ backgroundImage: `url(${bg})` }}
+            className="relative text-white bg-black container-p flex md:flex-row flex-col lg:gap-10 md:gap-5 gap-3 py-12 bg-fit bg-bottom-left bg-no-repeat"
+           
         >
-            {/* <img className='absolute -top-30 left-0 object-fit' src={bg} alt="" /> */}
+            <img className='absolute top-0 left-0 object-cover w-1/2 h-full' src={bg} alt="" />
             <div className='relative md:w-1/2 w-full flex flex-col justify-between gap-10 lg:text-5xl md:text-3xl text-xl'>
 
                 <div>

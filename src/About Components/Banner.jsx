@@ -52,11 +52,12 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className=''>
-                    <div className='flex gap-5 md:flex-row flex-col o'>
+                    <div className='flex gap-5 md:flex-row flex-col '>
                         {
 
                             services.map((service) => (
-                                <div key={service.id} className='relative flex flex-col justify-start items-start lg:gap-10 gap-4 [background:linear-gradient(40deg,#07C42C33_1%,#0B0B0B_30%)] backdrop-blur-xl lg:p-10 p-5 rounded-xl'>
+                                <div key={service.id} className='relative flex flex-col justify-start items-start lg:gap-10 gap-4 [background:linear-gradient(40deg,#07C42C33_1%,#0B0B0B_30%)]
+                                hover:[background:linear-gradient(40deg,#141e11_1%,#0B0B0B_30%)] backdrop-blur-xl lg:p-10 p-5 rounded-xl hover:ring-1 hover:scale-101 transition-all duration-175 hover:ring-green-600/60'>
                                     <img className='absolute w-full top-0 left-0' src={bgbanner} alt="" />
                                     <img className=' max-h-12.5' src={service.icon} alt="" />
                                     <h3 className='lg:text-xl text-lg'>{service.title}</h3>
@@ -83,8 +84,8 @@ const Banner = () => {
                         <p>working together to </p><img className='sm:h-6 h-3 px-1' src={imgs} alt="" /> <p> turn ideas into</p>
                     </div>
                     <p className='w-full text-center'>scalable digital products.</p>
-                    <div className=' rounded-full outline-none flex flex-row gap-2 px-4 md:py-2 py-1 border border-[#07C42C] text-xs bg-[#B7B7B7] text-black'>
-                        <button >
+                    <div className=' rounded-full outline-none flex flex-row gap-2 px-4 md:py-2 py-1 border border-[#07C42C] text-xs bg-white cursor-pointer text-black'>
+                        <button className='cursor-pointer'>
                             <span className=''>Discover More</span>
                         </button>
                         <div className='w-7 h-7 p-2 rounded-full relative bg-[#000000] flex  items-center justify-end'>

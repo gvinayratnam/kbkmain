@@ -9,6 +9,7 @@ import Services from './Home Components/Services'
 import NavBar from './NavBar'
 import Development from './Home Components/Development'
 import Theabout from './Theabout'
+import About from './Home Components/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
           <Route path='/about' element={<Theabout/>}/>
 
         </Routes>
+        
       </BrowserRouter>
     </>
   )

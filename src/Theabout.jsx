@@ -7,6 +7,9 @@ import Awards from './About Components/Awards'
 import Aboutslider from './About Components/Aboutslider'
 import Skill from './About Components/Skill'
 import Achivements from './About Components/Achivements'
+import Experts from './About Components/Experts'
+import Project from './About Components/Project'
+import Mainabout from './Mainabout'
 
 const Theabout = () => {
   return (
@@ -18,6 +21,9 @@ const Theabout = () => {
       <Aboutslider/>
       <Skill/>
       <Achivements/>
+      <Experts/>
+      <Project/>
+      <Mainabout/>
     </div>
   )
 }
