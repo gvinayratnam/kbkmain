@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import aboutbg from '../assets/images/aboutbg.png'
+import { NavLink } from 'react-router-dom'
 
 const About = () => {
 // let [input,setinput] = useState({
@@ -105,7 +106,7 @@ const About = () => {
                             <div className='flex sm:gap-10 gap-3 flex-row  justify-center sm:flex-nowrap flex-wrap'>
                                 <p className='text-xs w-full'>SITEMAP</p>
                                 <ul className='md:text-3xl'>
-                                    <li>About</li>
+                                    <li><NavLink to={'/about'}>About</NavLink></li>
                                     <li>Works</li>
                                     <li>Services</li>
                                     <li>Contact</li>

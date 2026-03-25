@@ -1,109 +1,215 @@
-import React, { useState } from 'react'
-import box from '../assets/aboutexperts/box.png'
-import grad from '../assets/aboutexperts/grad.png'
+import React from 'react';
+import { Form, Input, Select, ConfigProvider, theme } from 'antd';
+import box from '../assets/aboutexperts/box.png';
+import grad from '../assets/aboutexperts/grad.png';
+
+const { TextArea } = Input;
 
 const Project = () => {
-    const [inputvalues,setInputvalues] = useState({
-        'name':'',
-        'email':'',
-        'interest':'',
-        'budgest':'',
-        'project':''
+  const [form] = Form.useForm();
 
-    })
-    const handleinput=(e)=>{
-        setInputvalues({
-            ...inputvalues,[e.target.name]:e.target.value
-        })
+  const interestOptions = [
+    { value: 'web', label: 'Web Development' },
+    { value: 'app', label: 'App Development' }
+  ];
+  
+  const budgetOptions = [
+    { value: '1000', label: '$1000' },
+    { value: '5000', label: '$5000' }
+  ];
+
+  const onFinish = (values) => {
+    console.log("Form Submitted", values);
+  };
+
+  const handleinputName = (value) => {
+    if (!value) return '';
+    return value.replace(/[^a-zA-Z\s]/g, '');
+  };
+
+  const handleinputEmail = (value) => {
+    if (!value) return '';
+    let val = value.replace(/[^a-zA-Z0-9@.]/g, '');
+    const parts = val.split('@');
+    if (parts.length > 2) {
+      val = parts[0] + '@' + parts[1];
     }
-    const submitHandle = (e) => {
-    e.preventDefault()
-    console.log("Form Submitted")
-}
-    console.log(inputvalues)
-    return (
-        <div className='relative  bg-black lg:py-0 py-10'>
-            <div className='sm:h-full h-50 w-full'>
-                <img className='w-full h-full  object-cover object-top ' src={grad} alt="" />
-            </div>
-            <img className='absolute sm:top-[10%] top-0' src={box} alt="" />
-            <div className='absolute lg:top-[12%] top-[3%] flex flex-col items-center z-10 text-white  w-full'>
-                <h3 className='md:text-7xl text-4xl'>
-                    Have a
-                </h3>
-                <h1 className='md:text-9xl text-6xl'>
-                    Project
-                </h1>
-                <h3 className='md:text-7xl text-4xl'>
-                    In Mind?
-                </h3>
-            </div>
-            <div className=' w-full sm:absolute static lg:bottom-[10%] sm:bottom-[0%]   container-p flex flex-col justify-center items-center z-10  text-white '>
-                <div className='md:w-[70%] '>
-                    
-                    <form onSubmit={submitHandle} className='w-full flex flex-col sm:gap-10 gap-5' >
-                        <div className='flex  sm:flex-nowrap flex-wrap sm:gap-10 gap-5'>
-                            <div className="relative w-full">
-                                <input
-                                    name='name'
-                                    value={inputvalues.name}
-                                    onChange={e=>handleinput(e)}
-                                    type="text"
-                                    placeholder="Name"
-                                    className={`peer focus:outline-none px-1 py-3 rounded-md w-full h-full  object-cover object-top border-b  border-gray-700/50  placeholder:text-[#FFFFFFA3]`}
-                                />
+    return val;
+  };
 
-                                <span className="absolute left-11.75 top-1/2 -translate-y-1/2 text-[#07C42C] 
-                                    peer-focus:hidden peer-not-placeholder-shown:hidden">
-                                    *
-                                </span>
-                            </div>
+  const handleInputNoSpecial = (value) => {
+    if (!value) return '';
+    return value.replace(/[^a-zA-Z0-9 ]/g, '');
+  };
 
-                            <div className="relative w-full">
-                                <input   
-                                    type="text"
-                                    name='email'
-                                    onChange={e=>handleinput(e)}
-                                    value={inputvalues.email}
-                                    placeholder="Email"
-                                    className="peer w-full focus:outline-none px-1 py-3 rounded-md border-b-2 border-gray-700/50 placeholder:text-[#FFFFFFA3]"
-                                />
+  
+  const uniformInputStyles = "w-full! px-3! py-3! !border-0 !border-b-2 !border-b-gray-700/50 bg-transparent! text-white! focus:bg-transparent! hover:bg-transparent! rounded-lg! focus:outline-none! shadow-none!";
+  
+  const uniformSelectStyles = "w-full! px-3! !border-0 !border-b-2 !border-b-gray-700/50 bg-transparent! text-white! focus:bg-transparent! hover:bg-transparent! rounded-lg! shadow-none!";
 
-                                <span className="absolute left-11 top-1/2 -translate-y-1/2 text-[#07C42C]  
-                                    peer-focus:hidden peer-not-placeholder-shown:hidden ">
-                                    *
-                                </span>
-                            </div>
-                        </div>
+  return (
+    <ConfigProvider 
+      theme={{ 
+        algorithm: theme.darkAlgorithm,
+        token: {
+          colorTextPlaceholder: '#FFFFFFA3',
+          fontSize: 16,
+          controlOutlineWidth: 0,
+        },
+        components: {
+          Select: {
+            paddingBlock: 12,
+            paddingInline: 12, 
+            colorBgElevated: '#111111', 
+            controlItemBgHover: 'rgba(7, 196, 44, 0.2)', 
+            controlItemBgActive: 'rgba(7, 196, 44, 0.4)', 
+            colorText: '#E5E7EB', 
+          }
+        }
+      }}
+    >
+      <div className='relative bg-black py-20 '>
+        <div className='sm:h-full h-50 w-full'>
+          <img className='w-full h-full object-cover object-top' src={grad} alt="" />
+        </div>
 
-                        <div className='flex  sm:flex-nowrap flex-wrap sm:gap-10 gap-5'>
-                            <select className="w-full py-3 focus:outline-none px-1 rounded-md border-b-2 border-gray-700/50 text-[#FFFFFFA3] " value={inputvalues.interest} name='interest'  onChange={e=>handleinput(e)}>
-                                <option value="You are interested in" >You are interested in</option>
-                            </select>
-                            <select className="w-full py-3 focus:outline-none px-1 border-b border-gray-700/50 text-[#FFFFFFA3]" name='budgest' value={inputvalues.budgest} onChange={e=>handleinput(e)}>
-                                <option value="Budget in USD" className='text-black'>Budget in USD</option>
-                                <option value="hii" className='text-black'>hii</option>
-                            </select>
-                        </div>
+        <img className='absolute sm:top-[10%] top-0' src={box} alt="" />
 
-                        <div>
-                            <input className='placeholder:text-[#FFFFFFA3] w-full py-3 rounded-md border-b-2 border-gray-700/50 focus:outline-none px-1' type="text" placeholder='Project details' name="project" 
-                            value={inputvalues.project}
-                            onChange={e=>handleinput(e)}
-                            id="" />
-                        </div>
+        <div className='absolute lg:top-[12%] top-[3%] flex flex-col items-center z-10 text-white w-full'>
+          <h3 className='md:text-7xl text-4xl'>Have a</h3>
+          <h1 className='md:text-9xl text-6xl'>Project</h1>
+          <h3 className='md:text-7xl text-4xl'>In Mind?</h3>
+        </div>
 
-                        <div className='flex lg:flex-row gap-3 flex-col justify-between items-center '>
-                            <button type='submit' className='text-xs border rounded-md cursor-pointer px-4 py-2'>SUBMIT MESSAGE</button> 
-                            <p className='sm:text-base text-xs md:py-0 py-4!'><span>say hello - </span><span className='text-[#07C42C]'><a href="mailto:hello@kbkbusinesssolutions.com">hello@kbkbusinesssolutions.com</a></span></p>
-                        </div>
+        <div className='w-full sm:absolute static lg:bottom-[10%] sm:bottom-[0%] container-p flex flex-col justify-center items-center z-10 text-white'>
+          <div className='md:w-[70%]'>
+            
+            <Form 
+              form={form}
+              layout="vertical"
+              onFinish={onFinish}
+              className='w-full flex flex-col sm:gap-10 gap-5'
+              requiredMark={false} 
+            >
 
-                    </form>
+              <div className='flex sm:flex-nowrap flex-wrap sm:gap-10 gap-5'>
+                
+
+                <div className="relative w-full group">
+                  <Form.Item 
+                    name="name" 
+                    className="m-0"
+                    normalize={handleinputName}
+                    rules={[{ required: true, message: 'Please enter name' }]}
+                  >
+                    <Input 
+                      placeholder="Name" 
+                      variant="borderless" 
+                      className={uniformInputStyles}
+                    />
+                  </Form.Item>
+        
+                  <span className="absolute left-16 top-1/3 -translate-y-1/2 text-[#07C42C] pointer-events-none group-focus-within:hidden group-has-[input:not(:placeholder-shown)]:hidden">
+                    *
+                  </span>
                 </div>
 
-            </div>
-        </div>
-    )
-}
+             
+                <div className="relative w-full group">
+                  <Form.Item 
+                    name="email" 
+                    className="m-0 "
+                    normalize={handleinputEmail}
+                    rules={[
+                      { required: true, message: 'Email field is missing!' },
+                      { type: 'email', message: 'Enter a valid email!' }
+                    ]}
+                  >
+                    <Input 
+                      placeholder="Email" 
+                      variant="borderless"
+                      className={uniformInputStyles}
+                    />
+                  </Form.Item>
+                  <span className="absolute left-14 top-1/3 -translate-y-1/2 text-[#07C42C] pointer-events-none group-focus-within:hidden group-has-[input:not(:placeholder-shown)]:hidden">
+                    *
+                  </span>
+                </div>
+              </div>
 
-export default Project
+              <div className='flex sm:flex-nowrap flex-wrap sm:gap-10 gap-5'>
+                <div className="w-full">
+                  <Form.Item 
+                    name="interest" 
+                    className="m-0"
+                    rules={[{ required: true, message: 'Interest field is missing!' }]}
+                  >
+                    <Select
+                      options={interestOptions}
+                      placeholder="You are interested in"
+                      variant="borderless"
+                      className={uniformSelectStyles}
+                    />
+                  </Form.Item>
+                </div>
+
+                <div className="w-full">
+                  <Form.Item 
+                    name="budget" 
+                    className="m-0"
+                    rules={[{ required: true, message: 'Budget field is missing!' }]}
+                  >
+                    <Select
+                      options={budgetOptions}
+                      placeholder="Budget in USD"
+                      variant="borderless"
+                      className={uniformSelectStyles}
+                    />
+                  </Form.Item>
+                </div>
+              </div>
+
+              <div>
+                <Form.Item 
+                  name="project" 
+                  className="m-0"
+                  normalize={handleInputNoSpecial}
+                  rules={[{ required: true, message: 'Project details are missing!' }]}
+                >
+                  <TextArea 
+                    placeholder="Project details" 
+                    variant="borderless"
+                    rows={4} 
+                    className={`${uniformInputStyles} resize-y`}
+                  />
+                </Form.Item>
+              </div>
+
+              <div className='flex lg:flex-row gap-3 flex-col justify-between items-center'>
+                <button
+                  type='submit'
+                  className='text-xs border rounded-md cursor-pointer px-4 py-2 bg-transparent text-white hover:bg-white/10 transition-colors'
+                >
+                  SUBMIT MESSAGE
+                </button>
+
+                <p className='text-sm'>
+                  say hello -
+                  <span className='text-[#07C42C]! ml-1'>
+                    <a className='text-[#07C42C]! ' href="mailto:hello@kbkbusinesssolutions.com">
+                      hello@kbkbusinesssolutions.com
+                    </a>
+                  </span>
+                </p>
+              </div>
+
+            </Form>
+
+          </div>
+        </div>
+      </div>
+    </ConfigProvider>
+  );
+};
+
+export default Project;

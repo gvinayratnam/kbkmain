@@ -92,7 +92,7 @@ const Info = () => {
                 if(entry.isIntersecting){
                     setStart(true)
                 }
-                console.log(entry)
+                // console.log(entry)
             },{threshold:0.5}
         );
         if(sectionRef.current){

@@ -31,7 +31,8 @@ const teamMembers = [
         name: "Darlene Robertson",
         role: "Flight engineer",
         image: p3
-    }
+    },
+   
 ]
 
 const Experts = () => {
