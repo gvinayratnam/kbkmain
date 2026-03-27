@@ -3,34 +3,8 @@ import aboutbg from '../assets/images/aboutbg.png'
 import { NavLink } from 'react-router-dom'
 
 const About = () => {
-// let [input,setinput] = useState({
-//     name:'',
-//     nameStatus:true,
-//     email:'',
-//     emailStatus:true,
-//     project:'',
-//     projectStatus:true,
-// })
-
-// function checkChar(value,status){
-//     for(let i=0;i<value.length;i++){
-//         console.log(value,status)
-//         if((value[i]>'a'|| value[i]<'z' )&&(value[i]>'A'|| value[i]<"Z")) {
-//             console.log('True')
-//             // setinput({...input,status:true})
-//         }
-//         // return  setinput({...input,status:false})
-//     }
-// }
-// let charonly = (e) =>{
-//     setinput({...input,[e.target.name]:e.target.value})
-//     console.log(input)
-//     checkChar(e.target.value,e.target.name)
-// }
-
-
     return (
-        <div className=' bg-black'>
+        <div className='bg-black'>
             <div className='w-full  relative '>
                 <img className='absolute  top-0' src={aboutbg} alt="" />
 
@@ -42,8 +16,7 @@ const About = () => {
                                 <div className="relative w-full">
                                     <input
                                         name='name'
-                                        // value={input.name}
-                                        // onChange={e=>charonly(e)}
+                                       
                                         type="text"
                                         placeholder="Name"
                                         className={`peer focus:outline-none px-1 w-full py-3 rounded-md border-b-2 border-gray-700/50  placeholder:text-[#FFFFFFA3]`}
@@ -57,10 +30,10 @@ const About = () => {
 
                                 <div className="relative w-full">
                                     <input
-                                        //  onChange={e=>charonly(e)}
+                                       
                                         type="text"
                                         name = 'email'
-                                        // value={input.email}
+                                        
                                         placeholder="Email"
                                         className="peer w-full focus:outline-none px-1 py-3 rounded-md border-b-2 border-gray-700/50 placeholder:text-[#FFFFFFA3]"
                                     />
@@ -93,7 +66,7 @@ const About = () => {
 
                 </div>
 
-                <div className='container-p text-white relative z-10'>
+                <div className='container-p text-white relative z-10 sm:pb-10 pb-0'>
                     <div className=' w-full flex flex-col sm:flex-row sm:justify-between'>
                         <div >
                             <div className='flex gap-2 sm:justify-start mb-3 items-center'>
