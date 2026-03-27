@@ -10,6 +10,7 @@ import NavBar from './NavBar'
 import Development from './Home Components/Development'
 import Theabout from './Theabout'
 import About from './Home Components/About'
+import TheService from './TheService'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<Theabout/>}/>
-
+          <Route path='/service' element={<TheService/>} />
         </Routes>
         
       </BrowserRouter>

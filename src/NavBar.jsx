@@ -18,7 +18,7 @@ const NavBar = () => {
                 <div className='flex sm:justify-center justify-between sm:gap-10 sm:text-base text-xs sm:p-4 py-4 text-white'>
                     <div className='cursor-pointer'><NavLink to={'/'}>Home</NavLink></div>
                     <div className='cursor-pointer'><NavLink to={'/about'}>About</NavLink></div>
-                    <div className='cursor-pointer'><span>Services</span></div>
+                    <div className='cursor-pointer'><NavLink to={'/service'}>Services</NavLink></div>
                     <div className='cursor-pointer'><span>Portfolio</span></div>
                     <div className='cursor-pointer'><span>Contact</span></div>
                 </div>
