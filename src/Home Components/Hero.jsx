@@ -30,7 +30,7 @@ const Hero = () => {
                         <span className='md:text-8xl sm:text-7xl text-5xl font-semibold leading-none'>KBK </span>
                         <div className='relative'>
                             <span className=' sm:text-3xl sm:border-none border-b-3 border-[#00C950] text-lg font-semibold leading-none'>Businesssolutions</span>
-                            <div className='sm:w-[80px] sm:h-[8px] sm:block hidden bg-[#00C950] absolute sm:-right-[4%] '></div>
+                            <div className='sm:w-20 sm:h-2 sm:block hidden bg-[#00C950] absolute sm:-right-[4%] '></div>
                         </div>
                     </div>
 
