@@ -179,7 +179,7 @@ const Services2 = () => {
                 transform: `translateX(calc(-${current * 100}% + ${drag}%))`,
                 transition: isTransition ? 'transform 0.9s ease' : '',
               }}
-              className='flex md:min-w-[88%] min-w-full justify-start md:flex-row flex-col  md:items-stretch items-center gap-5 relative'
+              className='flex md:min-w-[85%] min-w-full justify-start md:flex-row flex-col  md:items-stretch items-center gap-5 relative'
               aria-roledescription="slide"
               aria-label={`${item.title} slide`}
             >

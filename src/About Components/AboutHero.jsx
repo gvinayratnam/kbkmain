@@ -23,7 +23,7 @@ const AboutHero = () => {
                 </div>
             </div>
 
-            <img className='absolute z-10 left-0 md:bottom-2 -bottom-3  md:w-30 w-22' src={wheel} alt="" />
+            <img className='absolute z-10 left-0 md:bottom-2 -bottom-3 animate-pulse  md:w-30 w-22' src={wheel} alt="" />
             <img className='absolute md:top-[10%] md:left-[45%] top-[20%] left-[80%] w-[15%] rocket-float rotate-10'  src={rocket} alt="" />
         </div>
     )

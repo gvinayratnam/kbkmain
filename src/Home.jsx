@@ -53,9 +53,10 @@ const Home = () => {
    <div>
      <Hero/>
      <Development/>
+    <Services2/>
      <Process/>
      {/* <Services/> */}
-     <Services2/>
+    
      <Iso/>
      <Info/>
      <Techstack/>

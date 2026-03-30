@@ -25,8 +25,8 @@ const NavBar = () => {
 
            
             <div className='sm:hidden block text-white'>
-                {/* Fixed Top Bar */}
-                <div className='h-16 px-5 flex items-center justify-between bg-linear-to-r from-[#242424] to-[#111111] fixed top-0 z-[90] w-full border-b border-white/5'>
+             
+                <div className='h-16 px-5 flex items-center justify-between bg-linear-to-r from-[#242424] to-[#111111] fixed top-0 z-90 w-full border-b border-white/5'>
                     <span className='font-bold text-lg tracking-tight'>Kbk</span>
                     <span className='text-2xl cursor-pointer' onClick={() => setBar(!bar)}>
                         <FaBars />
@@ -65,7 +65,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            {/* SPACER - Prevents content from being hidden under the fixed nav */}
+          
             <div className='h-16'></div>
         </>
     )

@@ -16,21 +16,21 @@ const Development = () => {
             setbgImage(bg.length-1)
         }
     },[bgimage])
-    let next =()=>{
+    let prev =()=>{
         setbgImage(bgimage+1)
     }
-    let prev =()=>{
+    let next =()=>{
         setbgImage(bgimage-1)
     }
     console.log(bgimage)
   return (
-    <div className='container-p w-full h-auto bg-black bg-contain  w-full bg-center relative text-white'>
+    <div className='container-p  h-auto bg-black bg-contain  w-full bg-center relative text-white'>
       <div className=' h-full w-full  relative z-10 flex flex-col md:gap-100 sm:gap-60 gap-10 sm:justify-between justify-start md:items-start  items-center py-10  px-2'>
         <div className=''>
             <p  className='text-xs text-[#FFFFFFA3] md:mb-10 md:p-1'>SELECTED WORKS</p>
-            <p onClick={()=>setbgImage(1)} className={` sm:text-4xl text-2xl cursor-pointer font-[600] tracking-wider ${bgimage===1?'text-white':'text-[#FFFFFF52]/70'} `}>Digital Marketing</p>
-            <p onClick={()=>setbgImage(0)} className={`sm:text-5xl text-3xl cursor-pointer font-[600] ${bgimage===0?'text-white':'text-[#FFFFFF52]/70'} md:my-3`}>Development</p>
-            <p onClick={()=>setbgImage(2)} className={` sm:text-4xl text-2xl cursor-pointer font-[600] tracking-wider ${bgimage===2?'text-white':'text-[#FFFFFF52]/70'}`}>Media Service</p>
+            <p onClick={()=>setbgImage(1)} className={` sm:text-4xl text-2xl cursor-pointer font-semibold tracking-wider ${bgimage===1?'text-white':'text-[#FFFFFF52]/70'} `}>Digital Marketing</p>
+            <p onClick={()=>setbgImage(0)} className={`sm:text-5xl text-3xl cursor-pointer font-semibold ${bgimage===0?'text-white':'text-[#FFFFFF52]/70'} md:my-3`}>Development</p>
+            <p onClick={()=>setbgImage(2)} className={` sm:text-4xl text-2xl cursor-pointer font-semibold tracking-wider ${bgimage===2?'text-white':'text-[#FFFFFF52]/70'}`}>Media Service</p>
         </div>
 
         <div className='flex w-full md:flex-row flex-col justify-between  md:items-strat'>
