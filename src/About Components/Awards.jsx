@@ -18,7 +18,6 @@ const Awards = () => {
   const [isAnimating, setAnimating] = useState(true)
   const intervalRef = useRef(null)
 
- 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setCurrent(prev => prev + 1)
@@ -26,7 +25,6 @@ const Awards = () => {
 
     return () => clearInterval(intervalRef.current)
   }, [])
-
 
   useEffect(() => {
     if (current === slides.length - 1) {
@@ -53,7 +51,6 @@ const Awards = () => {
 
   return (
     <div className='w-full overflow-hidden bg-black border-t border-b border-[#BFF7471A] py-6'>
-
       <div
         className='flex'
         style={{
@@ -62,19 +59,19 @@ const Awards = () => {
         }}
       >
         {slides.map((group, index) => (
-          <div key={index} className='min-w-full flex justify-between px-4'>
+          <div key={index} className='min-w-full flex justify-between items-center px-2 sm:px-10 gap-2 sm:gap-4'>
             {group.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                className='h-10 sm:h-12 w-auto object-contain'
-                alt=""
-              />
+              <div key={i} className='flex-1 flex justify-center'>
+                <img
+                  src={img}
+                  className='h-6 xs:h-8 sm:h-10 md:h-12 w-auto object-contain shrink-0'
+                  alt=""
+                />
+              </div>
             ))}
           </div>
         ))}
       </div>
-
     </div>
   )
 }

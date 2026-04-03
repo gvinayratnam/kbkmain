@@ -2,6 +2,8 @@ import React from 'react';
 import { Form, Input, Select, ConfigProvider, theme } from 'antd';
 import box from '../assets/aboutexperts/box.png';
 import grad from '../assets/aboutexperts/grad.png';
+import satran from '../assets/aboutexperts/satran.png';
+
 
 const { TextArea } = Input;
 
@@ -39,7 +41,7 @@ const Project = () => {
 
   const handleInputNoSpecial = (value) => {
     if (!value) return '';
-    return value.replace(/[^a-zA-Z0-9 ]/g, '');
+    return value.replace(/[^a-zA-Z0-9]/g, '');
   };
 
   
@@ -68,11 +70,11 @@ const Project = () => {
         }
       }}
     >
-      <div className='relative bg-black py-20 '>
+      <div className='relative bg-black md:py-20 py-10'>
         <div className='sm:h-full h-50 w-full'>
-          <img className='w-full h-full object-cover object-top' src={grad} alt="" />
+          <img className='w-full h-full object-cover object-top ' src={grad} alt="" />
         </div>
-
+        <img className='absolute lg:top-[5%] md:top-0 top-0 lg:w-50 md:w-35 sm:w-20 w-15 left-[5%] animate-pulse' src={satran} alt="" />
         <img className='absolute sm:top-[10%] top-0' src={box} alt="" />
 
         <div className='absolute lg:top-[12%] top-[3%] flex flex-col items-center z-10 text-white w-full'>
@@ -81,7 +83,7 @@ const Project = () => {
           <h3 className='md:text-7xl text-4xl'>In Mind?</h3>
         </div>
 
-        <div className='w-full sm:absolute static lg:bottom-[10%] sm:bottom-[0%] container-p flex flex-col justify-center items-center z-10 text-white'>
+        <div className='w-full sm:absolute static lg:bottom-[10%] sm:bottom-[0%] container-p flex flex-col justify-center items-center z-10 text-white '>
           <div className='md:w-[70%]'>
             
             <Form 

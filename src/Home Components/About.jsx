@@ -58,7 +58,7 @@ const About = () => {
             }}
         >
             <div className='bg-black'>
-                <div className='w-full relative min-h-screen'>
+                <div className='w-full relative'>
                     <img className='absolute top-0 w-full object-cover opacity-60' src={aboutbg} alt="" />
 
                     <div className='w-full relative container-p flex flex-col justify-center items-center z-10 text-white lg:py-35 sm:py-20 py-10'>
@@ -185,36 +185,7 @@ const About = () => {
                     </div>
 
                     
-                    <div className='container-p text-white relative z-10 sm:pb-10 pb-5'>
-                        <div className='w-full flex flex-col sm:flex-row sm:justify-between border-t border-gray-800 pt-10'>
-                            <div>
-                                <div className='flex gap-2 sm:justify-start mb-3 items-center'>
-                                    <div className='h-2 w-2 bg-[#07C42C] animate-pulse shadow-[0px_0px_3px_2px_#07C42C] rounded-full'></div>
-                                    <p className='text-xs font-bold tracking-widest'>WORKING GLOBALLY</p>
-                                </div>
-                            </div>
-
-                            <div className='flex sm:w-2/3 w-full sm:justify-between justify-evenly sm:gap-0 gap-5 lg:pr-35'>
-                                <div className='flex sm:gap-10 gap-3 flex-row justify-center sm:flex-nowrap flex-wrap'>
-                                    <p className='text-[10px] text-white-500 w-full'>SITEMAP</p>
-                                    <ul className='md:text-3xl text-xl leading-snug'>
-                                        <li><NavLink to={'/about'} className="hover:text-[#07C42C] transition-colors">About</NavLink></li>
-                                        <li><NavLink to={'/works'} className="hover:text-[#07C42C] transition-colors">Works</NavLink></li>
-                                        <li><NavLink to={'/services'} className="hover:text-[#07C42C] transition-colors">Services</NavLink></li>
-                                        <li><NavLink to={'/contact'} className="hover:text-[#07C42C] transition-colors">Contact</NavLink></li>
-                                    </ul>
-                                </div>
-                                <div className='flex gap-3 justify-center sm:gap-10 sm:flex-nowrap flex-wrap flex-row'>
-                                    <p className='text-[10px] text-white-500 w-full'>SOCIALS</p>
-                                    <ul className='md:text-3xl text-xl leading-snug'>
-                                        <li><a href="#" className="hover:text-[#07C42C] transition-colors">Twitter (X)</a></li>
-                                        <li><a href="#" className="hover:text-[#07C42C] transition-colors">Dribbble</a></li>
-                                        <li><a href="#" className="hover:text-[#07C42C] transition-colors">LinkedIn</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </ConfigProvider>

@@ -18,6 +18,7 @@ const SERVICE_DATA = [
       "Custom Web Applications",
       "CRM / ERP Systems",
     ],
+    star:'⭐⭐⭐⭐⭐'
   },
   {
     title: "Photoshopy",
@@ -32,6 +33,7 @@ const SERVICE_DATA = [
       "Product Photo Editing",
       "Creative Poster",
     ],
+    star:'⭐⭐⭐⭐'
   },
 ]
 
@@ -58,7 +60,7 @@ const Services2 = () => {
     SERVICE_DATA[1],
   ], [])
 
-  // Infinite loop — silently jump from clone to real slide
+
   useEffect(() => {
     if (current === END_CLONE_INDEX) {
       setTimeout(() => {
@@ -73,7 +75,7 @@ const Services2 = () => {
     }
   }, [current])
 
-  // Re-enable transition after silent jump
+
   useEffect(() => {
     if (!isTransition) {
       const timer = setTimeout(() => setIsTransition(true), 50)
@@ -81,7 +83,7 @@ const Services2 = () => {
     }
   }, [isTransition])
 
-  // Unlock click guard after animation completes
+
   useEffect(() => {
     if (isAnimating) {
       const timer = setTimeout(() => setIsAnimating(false), 900)
@@ -89,7 +91,7 @@ const Services2 = () => {
     }
   }, [isAnimating])
 
-  // Cleanup on unmount
+
   useEffect(() => {
     return () => clearTimeout(timerRef.current)
   }, [])
@@ -112,7 +114,7 @@ const Services2 = () => {
     if (window.innerWidth > 768) return
     setTouchStart(e.targetTouches[0].clientX)
     setTouchEnd(null)
-    // setIsTransition(false) // disable CSS so drag follows finger smoothly
+    
   }
 
   const onTouchMove = (e) => {
@@ -137,13 +139,12 @@ const Services2 = () => {
     const swipePercent = (Math.abs(touchDistance) / window.innerWidth) * 100
 
     if (swipePercent > 20) {
-      // Re-enable transition BEFORE calling nextSlide/prevSlide
-      // so isAnimating guard sees isTransition=true and lets it through
+   
       setIsTransition(true)
       if (touchDistance > 0) nextSlide()
       else prevSlide()
     } else {
-      // Not enough swipe — snap back with a short delay
+     
       clearTimeout(timerRef.current)
       timerRef.current = setTimeout(() => setIsTransition(true), 20)
     }
@@ -183,7 +184,7 @@ const Services2 = () => {
               aria-roledescription="slide"
               aria-label={`${item.title} slide`}
             >
-              {/* Image */}
+              
               <div className='lg:max-w-62.5 max-w-57.5 w-full flex items-center justify-center'>
                 <img
                   className='w-full md:h-full overflow-hidden lg:object-cover object-contain'
@@ -198,10 +199,11 @@ const Services2 = () => {
                 />
               </div>
 
-              {/* Content */}
+              
               <div className='flex flex-col justify-between items-start lg:gap-4 gap-2'>
                 <h2 className='text-3xl'>{item.title}</h2>
                 <p className='lg:text-sm text-xs leading-tight'>{item.description}</p>
+                <span>{item.star}</span>
                 <div className='border-t w-full' />
                 <ul className='text-xs grid lg:grid-cols-1 grid-cols-2 lg:gap-3 gap-2'>
                   {item.list.map((listItem, listIdx) => (
@@ -216,7 +218,7 @@ const Services2 = () => {
                 </button>
               </div>
 
-              {/* Prev / Next buttons */}
+              
               <div className='flex justify-center items-center gap-3 md:static fixed bottom-1 right-3'>
                 {/* <button
                   onClick={prevSlide}

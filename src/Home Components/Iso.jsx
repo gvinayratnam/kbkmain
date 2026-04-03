@@ -56,7 +56,7 @@ const Iso = () => {
                 </div>
 
                 <div className='w-[14%] px-5 '>
-                    <img className='w-full' src={isologo} alt="" />
+                    <img className='w-full min-w-9' src={isologo} alt="" />
                 </div>
                 <div className='flex flex-col  justify-between gap-10  lg:w-2/4'>
 

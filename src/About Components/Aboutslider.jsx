@@ -40,7 +40,8 @@ const Aboutslider = () => {
     const extendedSlides = [
         arrImages[last_slide],
         ...arrImages,
-        arrImages[0]
+        arrImages[0],
+        arrImages[1]
     ]
 
     useEffect(() => {

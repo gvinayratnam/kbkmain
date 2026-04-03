@@ -9,6 +9,9 @@ import Techstack from './Home Components/Techstack'
 import Info from './Home Components/Info'
 import About from './Home Components/About'
 import Services2 from './Home Components/Services2'
+import Footer from './Footer'
+// import { Footer } from 'antd/es/layout/layout'
+
 
 
 const Home = () => {
@@ -61,6 +64,7 @@ const Home = () => {
      <Info/>
      <Techstack/>
      <About/>
+    <Footer/>
    </div>
    </>
   )

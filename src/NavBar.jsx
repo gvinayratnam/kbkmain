@@ -18,8 +18,9 @@ const NavBar = () => {
                     <NavLink to={'/'} className={({ isActive }) => `cursor-pointer transition-colors hover:text-[#00C950] ${isActive ? 'text-[#00C950]' : ''}`}>Home</NavLink>
                     <NavLink to={'/about'} className={({ isActive }) => `cursor-pointer transition-colors hover:text-[#00C950] ${isActive ? 'text-[#00C950]' : ''}`}>About</NavLink>
                     <NavLink to={'/service'} className={({ isActive }) => `cursor-pointer transition-colors hover:text-[#00C950] ${isActive ? 'text-[#00C950]' : ''}`}>Services</NavLink>
-                    <div className='cursor-pointer hover:text-[#00C950] transition-colors'>Portfolio</div>
-                    <div className='cursor-pointer hover:text-[#00C950] transition-colors'>Contact</div>
+                    <NavLink to={'/portfolio'} className={({ isActive }) => `cursor-pointer transition-colors hover:text-[#00C950] ${isActive ? 'text-[#00C950]' : ''}`}>Portfolio</NavLink>
+                    {/* <div className='cursor-pointer hover:text-[#00C950] transition-colors'>Portfolio</div> */}
+                     <NavLink to={'/contact'} className={({ isActive }) => `cursor-pointer transition-colors hover:text-[#00C950] ${isActive ? 'text-[#00C950]' : ''}`}>Contact</NavLink>
                 </div>
             </div>
 
@@ -58,7 +59,7 @@ const NavBar = () => {
                            
                              <NavLink onClick={() => setBar(false)} to={'/about'} className={({ isActive }) => isActive ? 'text-[#00C950]' : ''}>About</NavLink>
                              <NavLink onClick={() => setBar(false)} to={'/service'} className={({ isActive }) => isActive ? 'text-[#00C950]' : ''}>Services</NavLink>
-                            <div className='cursor-pointer'>Portfolio</div>
+                            <NavLink onClick={() => setBar(false)} to={'/portfolio'} className={({ isActive }) => isActive ? 'text-[#00C950]' : ''}>Portfolio</NavLink>
                             <div className='cursor-pointer'>Contact</div>
                         </div>
                     </div>
@@ -66,7 +67,7 @@ const NavBar = () => {
             </div>
 
           
-            <div className='h-16'></div>
+            <div className='h-16 bg-black'></div>
         </>
     )
 }

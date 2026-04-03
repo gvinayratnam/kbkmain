@@ -63,7 +63,7 @@ const ServiceSlider = () => {
                                 key={idx}
                                 onClick={() => handleNavClick(idx)}
                                 style={{ color: activeIndex === idx ? currentColor : '' }}
-                                className={`cursor-pointer transition-all duration-300 text-sm xl:text-base ${activeIndex === idx ? 'translate-x-2' : 'text-gray-500 hover:text-gray-300'}`}
+                                className={`cursor-pointer transition-all duration-200 font-bold text-sm xl:text-base ${activeIndex === idx ? 'translate-x-2 -translate-y-1' : 'text-gray-500 hover:text-gray-300 '}`}
                             >
                                 {item.title}
                             </p>
@@ -141,7 +141,7 @@ const ServiceSlider = () => {
                                                 ))}
                                             </ul>
 
-                                            <div className='border bg-black shadow-[inset_0px_0px_16px_0px_gray,0px_0px_2px_1px_black] border-gray-700 sm:text-xs text-[9px] rounded-full cursor-pointer sm:w-20 sm:h-20 w-15 h-15 flex items-center justify-center text-center'>
+                                            <div className='border bg-black shadow-[inset_0px_0px_16px_0px_gray,0px_0px_2px_1px_black] border-gray-700 sm:text-xs text-[9px] rounded-full cursor-pointer sm:w-23 sm:h-23 w-15 h-15 flex items-center justify-center text-center'>
                                                 Get free <br/> quotes 
                                                 <GoArrowUpRight 
                                                     style={{ color: item.color }} 

@@ -5,6 +5,8 @@ import thir from '../assets/imagesabout/div.service-icon.png'
 import bgbanner from '../assets/imagesabout/bgbanner.png'
 import tunder from '../assets/imagesabout/tunder.png'
 import imgs from '../assets/imagesabout/img.png'
+import cube from '../assets/imagesabout/cube.png'
+
 import { HiArrowTurnDownRight } from 'react-icons/hi2'
 import { PiArrowBendDownRight } from 'react-icons/pi'
 
@@ -77,21 +79,28 @@ const Banner = () => {
                     </div>
 
                 </div>
-                <div className='md:text-3xl sm:text-xl text-sm  w-full flex flex-col items-center text-[#FFFFFF] gap-2 pt-10'>
+                <div className='relative md:text-3xl sm:text-xl text-sm  w-full flex flex-col items-center text-[#FFFFFF] gap-2 pt-10'>
                     <p className='text-base font-light text-center w-full bord'> Who we are</p>
                     <p className='w-full text-center'>Strategy, design, and technology</p>
+                    <img className='absolute sm:-right-[10%] bottom-[75%] right-0 lg:w-40 animate-pulse sm:w-25 w-15' src={cube} alt="" />
                     <div className='w-full text-center flex items-center justify-center'>
                         <p>working together to </p><img className='sm:h-6 h-3 px-1' src={imgs} alt="" /> <p> turn ideas into</p>
                     </div>
                     <p className='w-full text-center'>scalable digital products.</p>
-                    <div className=' rounded-full outline-none flex flex-row gap-2 px-4 md:py-2 py-1 border border-[#07C42C] text-xs bg-white cursor-pointer text-black'>
+                    <div className=' rounded-full outline-none flex flex-row gap-2 px-4 md:py-2 py-1 border border-[#07C42C] text-xs bg-white cursor-pointer text-black group '>
                         <button className='cursor-pointer'>
                             <span className=''>Discover More</span>
                         </button>
-                        <div className='w-7 h-7 p-2 rounded-full relative bg-[#000000] flex  items-center justify-end'>
-                            <div className=' absolute bg-white w-1 h-1 top-1.5 left-3 rounded-full'></div>
-                           <div className='bg-white w-1 h-1 rounded-full'></div>
-                           <div className='absolute bg-white w-1 h-1 left-3 bottom-1.5 rounded-full'></div>
+                        <div className="w-7 h-7 rounded-full relative bg-black flex items-center justify-center  cursor-pointer">
+
+                            
+                            <div className="absolute bg-white w-1 h-1 top-1.5 left-3 rounded-full transition-all duration-300 "></div>
+
+                            <div className="bg-white w-1 h-1 rounded-full transition-all duration-500 ease-in-out group-hover:translate-x-1.5 relative"></div>
+
+                           
+                            <div className="absolute bg-white w-1 h-1 bottom-1.5 left-3 rounded-full transition-all duration-300 "></div>
+
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,8 @@ import Skill from './About Components/Skill'
 import Achivements from './About Components/Achivements'
 import Experts from './About Components/Experts'
 import Project from './About Components/Project'
-import Mainabout from './Mainabout'
+
+import Footer from './Footer'
 
 const Theabout = () => {
   return (
@@ -23,7 +24,10 @@ const Theabout = () => {
       <Achivements/>
       <Experts/>
       <Project/>
-      <Mainabout/>
+      <div className='lg:h-0 sm:h-10 bg-black h-0 w-full border'>
+
+      </div>
+      <Footer/>
     </div>
   )
 }

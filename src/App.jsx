@@ -11,20 +11,27 @@ import Development from './Home Components/Development'
 import Theabout from './Theabout'
 import About from './Home Components/About'
 import TheService from './TheService'
+import ThePortfolio from './ThePortfolio'
+import TheContact from './TheContact'
+import WorkPage from './WorkPage'
+import ScrollToTop from './Scrolltoup'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       {/* <Home/> */}
       {/* <Theabout/> */}
       <BrowserRouter>
+      <ScrollToTop/>
         <NavBar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<Theabout/>}/>
           <Route path='/service' element={<TheService/>} />
+          <Route path='/portfolio' element={<ThePortfolio/>}/>
+          <Route path='/contact' element={<TheContact/>} />
+          <Route path='/work' element={<WorkPage/>} />
         </Routes>
         
       </BrowserRouter>
